@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>PIX via Correios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="cssext.css"/>
+
+    </head>
+    <body>
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://i.postimg.cc/qv0LZ8cS/image-Photoroom.png" alt="Logo Correios">
+                <nav>
+                    <a href="#">Enviar</a>
+                    <a href="#">Receber</a>
+                    <a href="#">Comprar</a>
+                    <a href="#pix">PIX via Correios</a>
+                    <a href="#">Logística</a>
+                    <a href="#">Atendimento</a>
+                    <a href="#">Acesso à Informação</a>
+                </nav>
+            </div>
+            <div>
+                <a href="#" class="login">Faça Login ou Cadastre-se</a>
+                <a href="#"><img class="search-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/768px-Magnifying_glass_icon.svg.png" alt="Busca"></a>
+            </div>
+        </div>
+
+        <h1>PIX via Correios</h1>
+
+        <div class="container">
+            <section id="pix">
+                <div class="justificado">
+                    <form id="formLoginFalso" name="formLoginFalso">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome" 
+                               required="" placeholder="Informe seu nome"><br><br>
+
+                        <label for="cpf">CPF:</label><br>
+                        <input type="text" id="cpf" name="cpf" 
+                               maxlength="14" oninput="maskCPF(this)" placeholder="Insira o seu CPF"><br><br>
+
+                        <label for="phone">Telefone:</label><br>
+                        <input type="text" id="phone" name="phone" 
+                               maxlength="15" oninput="maskPhone(this)" placeholder="(XX) XXXXX-XXXX"><br><br>
+
+                        <label for="endereco">Endereço:</label><br>
+                        <div class="endereco">
+                            <div class="estado">
+                                <input list="estados" id="estado" name="estado" 
+                                       placeholder="Digite ou selecione seu estado">
+
+                                <datalist id="estados">
+                                    <option value="Acre">
+                                    <option value="Alagoas">
+                                    <option value="Amazonas">
+                                    <option value="Bahia">
+                                    <option value="Ceará">
+                                    <option value="Distrito Federal">
+                                    <option value="Espírito Santo">
+                                    <option value="Goiás">
+                                    <option value="Maranhão">
+                                    <option value="Mato Grosso">
+                                    <option value="Mato Grosso do Sul">
+                                    <option value="Minas Gerais">
+                                    <option value="Pará">
+                                    <option value="Paraíba">
+                                    <option value="Paraná">
+                                    <option value="Pernambuco">
+                                    <option value="Piauí">
+                                    <option value="Rio de Janeiro">
+                                    <option value="Rio Grande do Norte">
+                                    <option value="Rio Grande do Sul">
+                                    <option value="Rondônia">
+                                    <option value="Roraima">
+                                    <option value="Santa Catarina">
+                                    <option value="São Paulo">
+                                    <option value="Sergipe">
+                                    <option value="Tocantins">
+                                </datalist>
+                            </div>
+                            <div class="cidade">
+                                <input type="text" id="cidade" name="cidade" 
+                                       placeholder="Informe sua cidade"><br>  
+                            </div>
+                        </div>
+                        <div class="endereco">
+                            <div class="rua">
+                                <input type="text" id="rua" name="rua" 
+                                       required="" placeholder="Informe sua rua"><br>
+                            </div>   
+                            <div class="numero">
+                                <input type="number" id="numero" name="numero"
+                                       required="" placeholder="Informe o N°"><br>
+                            </div>
+                        </div>
+
+                        <label for="valor">Valor:</label><br>
+                        <input type="text" id="valor" name="valor" onkeyup="formatarMoeda(this)" 
+                               required="" placeholder="R$0,00"><br><br>
+
+                        <div class="centro">
+                            <input type="submit" value="Enviar" id="enviar" name="enviar"/>
+                            <input type="reset" id="limpar" name="limpar"/><br>
+                        </div>
+                    </form>
+                    <script src="js.js"></script>
+
+
+
+                </div>  
+            </section>
+        </div>  
+
+    </body>
+</html>
+
